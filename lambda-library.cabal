@@ -128,6 +128,21 @@ test-suite app5-test
         Support
         App
 
+executable app-eff
+    import:           warnings, app
+    main-is:          Main.hs
+    hs-source-dirs:   app-eff
+    other-modules:
+        Eff
+
+test-suite app-eff-test
+    import:           warnings, app-test
+    type:             exitcode-stdio-1.0
+    main-is:          Test.hs
+    hs-source-dirs:   app-eff, app-eff-test
+    other-modules:
+        Eff
+
 executable app-bluefin
     import:           warnings, app
     main-is:          Main.hs

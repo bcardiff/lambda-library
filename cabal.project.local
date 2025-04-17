@@ -1,0 +1,3 @@
+ignore-project: False
+tests: True
+test-show-details: direct
