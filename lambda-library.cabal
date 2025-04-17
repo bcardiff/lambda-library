@@ -16,7 +16,7 @@ common warnings
     ghc-options: -Wall
 
 common defaults
-    default-extensions: 
+    default-extensions:
         OverloadedStrings,
         OverloadedRecordDot
     build-depends:
@@ -59,8 +59,8 @@ test-suite app1-test
     other-modules:
         Support
     build-depends:
-        bytestring >= 0.11.5 && < 0.12, 
-        utf8-string >= 1.0.2 && < 1.1, 
+        bytestring >= 0.11.5 && < 0.12,
+        utf8-string >= 1.0.2 && < 1.1,
         main-tester >= 0.2.0 && < 0.3
 
 executable app2
@@ -103,7 +103,7 @@ test-suite app4-test
     main-is:          Test.hs
     hs-source-dirs:   app4, app4-test
     build-depends:
-        mtl >= 2.2.2 && < 2.3
+        mtl >= 2.2.2 && < 2.4
     other-modules:
         Support
         Result
@@ -115,7 +115,7 @@ executable app5
     other-modules:
         App
     build-depends:
-        mtl >= 2.2.2 && < 2.3
+        mtl >= 2.2.2 && < 2.4
 
 test-suite app5-test
     import:           warnings, app-test
@@ -123,7 +123,7 @@ test-suite app5-test
     main-is:          Test.hs
     hs-source-dirs:   app5, app5-test
     build-depends:
-        mtl >= 2.2.2 && < 2.3
+        mtl >= 2.2.2 && < 2.4
     other-modules:
         Support
         App
@@ -141,3 +141,18 @@ executable app-effectful
     hs-source-dirs:   app-effectful
     build-depends:
         effectful >= 2.3.1 && < 2.4
+
+executable app-heftia
+    import:           warnings, app
+    main-is:          Main.hs
+    hs-source-dirs:   app-heftia
+    build-depends:
+        heftia-effects >= 0.6.0.1 && < 0.7
+
+test-suite app-heftia-test
+    import:           warnings, app-test
+    type:             exitcode-stdio-1.0
+    main-is:          Test.hs
+    hs-source-dirs:   app-heftia, app-heftia-test
+    build-depends:
+        heftia-effects >= 0.6.0.1 && < 0.7
