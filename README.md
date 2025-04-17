@@ -25,6 +25,7 @@ There are some docs describing each alternative
 - **app-bluefin** similar to `app2` and `app3` but uses [`bluefin`](https://hackage.haskell.org/package/bluefin) package as a type level alternative of the handler pattern.
 - 🚧 **app-effectful** uses [`effectful`](https://hackage.haskell.org/package/effectful)
   - TBD tests
+- **app-heftia** uses [`heftia`](https://hackage.haskell.org/package/heftia-effects)
 - 🚧 **app-polysemy**
 - ❌ ~~**app-capabilities** similar to `app5` but uses `Capabilities` package~~.
   - ❌ [`Capabilities`](https://hackage.haskell.org/package/Capabilities) packages only works for `base >= 4.5 && 4.6`. We are using 4.17. I wanted to try it out based on [its blog post](https://www.tweag.io/blog/2018-10-04-capability/)
